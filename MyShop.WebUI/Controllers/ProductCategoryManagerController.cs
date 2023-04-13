@@ -61,7 +61,7 @@ namespace MyShop.WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(ProductCategory product, string Id)
+        public ActionResult Edit(ProductCategory productCategory, string Id)
         {
             ProductCategory productCategoryToEdit = context.Find(Id);
 
@@ -73,10 +73,10 @@ namespace MyShop.WebUI.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(product);
+                    return View(productCategory);
                 }
 
-                productCategoryToEdit.Category = product.Category;
+                productCategoryToEdit.Category = productCategory.Category;
 
                 context.Commit();
 
