@@ -24,7 +24,10 @@
                     <li>@Html.ActionLink("Category Admin", "Index", "ProductCategoryManager", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
                  @Html.Partial("_LoginPartial")
-            </dixv>
+                @{ 
+                    Html.RenderAction("BasketSummary", "Basket");
+                }
+            </div>
         </div>
     </nav>
     <div class="container body-content">
